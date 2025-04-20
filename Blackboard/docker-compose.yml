@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  access-gatekeeper:
+    build: ./access-gatekeeper
+    ports:
+      - "4001:4001"
+
+  command-router:
+    build: ./command-router
+    ports:
+      - "4000:4000"
+
+  critter-core:
+    build: ./critter-core
+    ports:
+      - "4002:4002"
+
+  xp-tracker:
+    build: ./xp-tracker
+    ports:
+      - "4003:4003"
+
+  blackboard-service:
+    build: ./blackboard-service
+    ports:
+      - "4005:4005"
